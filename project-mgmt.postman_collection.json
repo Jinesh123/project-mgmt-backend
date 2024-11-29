@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "d92d0ed9-2976-48b6-b38d-5fc8567f9cb6",
+		"name": "project-mgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22874000",
+		"_collection_link": "https://dark-comet-792247.postman.co/workspace/Team-Workspace~1f2e50eb-b818-4db4-8350-35c47ac94785/collection/22874000-d92d0ed9-2976-48b6-b38d-5fc8567f9cb6?action=share&source=collection_link&creator=22874000"
+	},
+	"item": [
+		{
+			"name": "ping-server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}",
+					"host": [
+						"{{baseurl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-project",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"test\": \"hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/projects",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-project-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/projects/123",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"projects",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-project",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/projects/123",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"projects",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/projects/123",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"projects",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/projects/123",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"projects",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Project 1\",\n    \"description\": \"this is project 1\",\n    \"status\": \"Not_Started\",\n    // \"dueDate\": \"2024-11-29 19:29:25.817+05:30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/projects",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
